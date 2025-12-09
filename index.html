@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="intro-screen" id="introScreen">
+            <h1 class="intro-title">Can You Guess These Logos?</h1>
+            <div class="timer-setup">
+                <label for="nameInput">Enter Your Name:</label>
+                <input type="text" id="nameInput" placeholder="Your name..." maxlength="30">
+            </div>
+            <button type="button" class="start-btn" id="startBtn">Start Quiz</button>
+        </div>
+
+        <div class="quiz-screen hidden" id="quizScreen">
+            <div class="header">
+                <div class="timer" id="timer">60s</div>
+                <div class="progress" id="progress">Logo 1 / 15</div>
+                <div class="score" id="score">Score: 0</div>
+            </div>
+
+            <div class="logo-container">
+                <h2 class="logo-number" id="logoNumber">LOGO # 1</h2>
+                <div class="logo-display" id="logoDisplay">
+                    <img id="logoImage" src="" alt="Logo">
+                </div>
+            </div>
+
+            <div class="answer-section">
+                <input type="text" id="answerInput" placeholder="Type your answer..." autocomplete="off">
+                <button type="button" class="submit-btn" id="submitBtn">Submit</button>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <div class="results-screen hidden" id="resultsScreen">
+            <h1 class="results-title">Quiz Complete!</h1>
+            <div class="final-score" id="finalScore"></div>
+            <div class="results-breakdown" id="resultsBreakdown"></div>
+            <button type="button" class="restart-btn" id="restartBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
